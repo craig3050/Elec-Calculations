@@ -41,6 +41,7 @@ def main():
 
             st.write(f"Calculated Voltage: {voltage} Volts")
             st.write(f"Calculated Current: {round(current,2)} Amps")
+            st.write(f"Calculated Power: {power} W / {power/1000} kW")
 
     with col2:
         st.header("Fault Current Calculation")
