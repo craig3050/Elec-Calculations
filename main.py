@@ -40,7 +40,7 @@ def main():
             power, voltage, current = power_voltage_current_conversion(power, selected_voltage_value, current)
 
             st.write(f"Calculated Voltage: {voltage} Volts")
-            st.write("Result 1 content...")
+            st.write(f"Calculated Current: {current} Amps")
 
     with col2:
         st.header("Fault Current Calculation")
