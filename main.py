@@ -3,7 +3,10 @@ import streamlit as st
 
 def power_voltage_current_conversion(power, voltage, current):
     if power and voltage:
-        current = power / voltage
+        if voltage == 230:
+            current = power / voltage
+        else:
+            current = power / (1.732 * voltage)
     elif power and current:
         voltage = power / current
     elif voltage and current:
