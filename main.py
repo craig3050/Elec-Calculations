@@ -10,7 +10,7 @@ def power_voltage_current_conversion(power, voltage, current):
     elif power and current:
         voltage = power / current
     elif voltage and current:
-        power = voltage * current
+        power = (1.732 * voltage) * current
     return power, voltage, current
 
 
