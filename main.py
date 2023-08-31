@@ -12,8 +12,7 @@ def power_voltage_current_conversion(power, voltage, current):
         power = (1.732 * voltage) * current
     return power, voltage, current
 
-def calculate_fault_current(secondary_voltage_str, transformer_size, impedance):
-    secondary_voltage = voltage_options[secondary_voltage_str]
+def calculate_fault_current(secondary_voltage, transformer_size, impedance):
     base_fault_current = (transformer_size * 1000) / (1.732 * secondary_voltage * (impedance / 100))
     return base_fault_current
 
