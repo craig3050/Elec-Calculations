@@ -55,7 +55,8 @@ def main():
         impedance = st.number_input("Transformer Impedance (%)")
 
         if st.button("Calculate Fault Current"):
-            fault_current = calculate_fault_current(selected_voltage_2, transformer_size, impedance)
+            selected_voltage_value_2 = voltage_options[selected_voltage_2]
+            fault_current = calculate_fault_current(selected_voltage_value_2, transformer_size, impedance)
             fault_current = fault_current / 1000
             st.write(f"Base Fault Current: {fault_current:.2f} kA")
 
